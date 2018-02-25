@@ -15,6 +15,33 @@ namespace Vidly.Controllers
             var movie = new Movie() { Name = "Shrek" };
 
             return View(movie);
+            //return Content("Hello World!");
+            //return HttpNotFound();
+            //return new EmptyResult();
+            //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" }); // (name of action, controller, anonymous object) ---> redirects to URL containing /?page=1&sortBy=name
+        }
+
+        public ActionResult Edit(int id) // id is same as in Controller
+        {
+            return Content("id=" + id);
+            //http://localhost:52148/movies/edit/1
+            //http://localhost:52148/movies/edit/?id=1
+        }
+
+        // movies
+        public ActionResult Index(int? pageIndex, string sortBy) // ? makes int nullable, not required for string type
+        {
+            if (!pageIndex.HasValue)
+            {
+                pageIndex = 1;
+            }
+
+            if (string.IsNullOrWhiteSpace(sortBy))
+            {
+                sortBy = "Name";
+            }
+
+            return Content($"pageIndex={pageIndex}&sortBy={sortBy}");
         }
     }
 }
