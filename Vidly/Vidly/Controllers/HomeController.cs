@@ -26,5 +26,20 @@ namespace Vidly.Controllers
 
             return View();
         }
+
+        public ActionResult Customers()
+        {
+            ViewBag.Message = "List of Customers";
+
+            return View();
+        }
+
+        public ActionResult Movies()
+        {
+            ViewBag.Message = "List of Movies";
+
+            return View();
+        }
+
     }
 }
