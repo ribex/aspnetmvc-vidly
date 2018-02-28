@@ -12,10 +12,10 @@ namespace Vidly.Controllers
         {
             var customers = new List<Customer>
             {
-                new Customer { Name = "Customer 1", Id = 1 },
-                new Customer { Name = "Customer 2", Id = 2 },
-                new Customer { Name = "Customer 3", Id = 3 },
-                new Customer { Name = "Customer 4", Id = 4 }
+                new Customer { Name = "Joan Rivers", Id = 1 },
+                new Customer { Name = "Snoopy", Id = 2 },
+                new Customer { Name = "Glenn Close", Id = 3 },
+                new Customer { Name = "Meryl Streep", Id = 4 }
 
             };
 
@@ -27,11 +27,15 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
-        public ActionResult Details(int id) // id is same as in Controller
-        {
-            return Content("id=" + id);
-            //http://localhost:52148/movies/edit/1
-            //http://localhost:52148/movies/edit/?id=1
-        }
+        //[Route("/details/{id}")]
+        //public ActionResult Details(int id) // id is same as in Controller
+        //{
+
+
+
+        //    return Content( + id);
+        //    //http://localhost:52148/movies/edit/1
+        //    //http://localhost:52148/movies/edit/?id=1
+        //}
     }
 }
