@@ -1,36 +1,24 @@
-﻿@using Microsoft.Ajax.Utilities
-@model Vidly.ViewModels.CustomerViewModel
+﻿@model IEnumerable<Vidly.Models.Customer>
 @{
     ViewBag.Title = "Customers";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
+<h2>Customers</h2>
 
-
-
-@*conditional class attribute*@
-@{
-    var className = Model.Customers.Count > 0 ? "some" : null;
-}
-
-@if (className.IsNullOrWhiteSpace())
+@if (!Model.Any())
 {
     <p>There aren't any customers yet.</p>
 } else
 {
     <table>
-        @foreach (var customer in Model.Customers)
+        @foreach (var customer in Model)
         {
             <tr>
-                <td>
-                    <a href="/Details/@customer.Id" class="@className">@customer.Name</a>
+                <td> 
+                    @Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)
                 </td>
             </tr>
-
         }
     </table>
 }
-
-
