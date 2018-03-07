@@ -11,14 +11,22 @@
     <p>There aren't any customers yet.</p>
 } else
 {
-    <table>
-        @foreach (var customer in Model)
-        {
-            <tr>
-                <td> 
-                    @Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)
-                </td>
-            </tr>
-        }
+    <table class="Table table-bordered  table-hover">
+        <thead>
+        <tr>Customer</tr>
+        <tr>Discount Rate</tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)
+                    </td>
+                    <td>@customer.MembershipType.DiscountRate%</td>
+                    
+                </tr>
+            }
+        </tbody>
     </table>
 }
