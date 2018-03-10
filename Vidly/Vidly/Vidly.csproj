@@ -237,6 +237,22 @@
     <Compile Include="Migrations\201803101633571_AddDbSetMoviesToContext.Designer.cs">
       <DependentUpon>201803101633571_AddDbSetMoviesToContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803101649290_AlterGenreId.cs" />
+    <Compile Include="Migrations\201803101649290_AlterGenreId.Designer.cs">
+      <DependentUpon>201803101649290_AlterGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803101819304_ChangeGenreIdTypeToInt.cs" />
+    <Compile Include="Migrations\201803101819304_ChangeGenreIdTypeToInt.Designer.cs">
+      <DependentUpon>201803101819304_ChangeGenreIdTypeToInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803101828526_RemoveMovieDbSet.cs" />
+    <Compile Include="Migrations\201803101828526_RemoveMovieDbSet.Designer.cs">
+      <DependentUpon>201803101828526_RemoveMovieDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803101832467_ReaddMovieDbSet.cs" />
+    <Compile Include="Migrations\201803101832467_ReaddMovieDbSet.Designer.cs">
+      <DependentUpon>201803101832467_ReaddMovieDbSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -358,6 +374,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803101633571_AddDbSetMoviesToContext.resx">
       <DependentUpon>201803101633571_AddDbSetMoviesToContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803101649290_AlterGenreId.resx">
+      <DependentUpon>201803101649290_AlterGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803101819304_ChangeGenreIdTypeToInt.resx">
+      <DependentUpon>201803101819304_ChangeGenreIdTypeToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803101828526_RemoveMovieDbSet.resx">
+      <DependentUpon>201803101828526_RemoveMovieDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803101832467_ReaddMovieDbSet.resx">
+      <DependentUpon>201803101832467_ReaddMovieDbSet.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
